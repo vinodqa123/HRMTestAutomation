@@ -19,18 +19,18 @@ import cucumber.api.junit.Cucumber;
 		                "pretty",
 		                "html:target/cucumber-reports/cucumber-pretty",
 		                "json:target/cucumber-reports/CucumberTestReport.json",
-		                "rerun:target/cucumber-reports/rerun.txt"         
-		                
+		                "rerun:target/cucumber-reports/rerun.txt"
+
 		        },
 			plugin = {"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html"}
-		
+
 		// ,plugin= {"pretty","html:target/site/cucumber-pretty","json:target/cucumber/cucumber.json"}
 		,monochrome = true
 		,dryRun=false
 		)
 public class TestRunner {
-	
-	
+
+
 @AfterClass
 public static void setup()
 	{
