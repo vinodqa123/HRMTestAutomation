@@ -22,25 +22,27 @@ import cucumber.api.junit.Cucumber;
 		                "rerun:target/cucumber-reports/rerun.txt"
 
 		        },
+			//	plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
+
 			plugin = {"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html"}
 
 		// ,plugin= {"pretty","html:target/site/cucumber-pretty","json:target/cucumber/cucumber.json"}
 		,monochrome = true
 		,dryRun=false
+
 		)
 public class TestRunner {
 
-
-@AfterClass
-public static void setup()
-	{
-	Reporter.loadXMLConfig(new File("src/test/resources/extent-config.xml"));
-	//Reporter.setSystemInfo("Test User", System.getProperty("user.name"));
-	Reporter.setSystemInfo("User Name", "AJ");
-	Reporter.setSystemInfo("Application Name", "Test App ");
-	Reporter.setSystemInfo("Operating System Type", System.getProperty("os.name").toString());
-	Reporter.setSystemInfo("Environment", "Production");
-	Reporter.setTestRunnerOutput("Test Execution Cucumber Report");
-	}
+	@AfterClass
+	public static void setup()
+		{
+		Reporter.loadXMLConfig(new File("src/test/resources/extent-config.xml"));
+		//Reporter.setSystemInfo("Test User", System.getProperty("user.name"));
+		Reporter.setSystemInfo("User Name", "AJ");
+		Reporter.setSystemInfo("Application Name", "Test App ");
+		Reporter.setSystemInfo("Operating System Type", System.getProperty("os.name").toString());
+		Reporter.setSystemInfo("Environment", "Production");
+		Reporter.setTestRunnerOutput("Test Execution Cucumber Report");
+		}
 
 }

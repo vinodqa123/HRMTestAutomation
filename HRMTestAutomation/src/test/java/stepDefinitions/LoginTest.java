@@ -4,7 +4,6 @@ import java.io.IOException;
 
 import Base.BaseClass;
 import Pages.LoginPage;
-import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -13,22 +12,13 @@ public class LoginTest extends BaseClass {
 
 	public LoginTest() throws IOException {
 		super();
+		login=new LoginPage();
 		// TODO Auto-generated constructor stub
 	}
 
 	LoginPage login;
 
-	@Before
-	public void test() throws InterruptedException, IOException {
-		System.out.println("Before");
-		browserInitialization();
-		login=new LoginPage();
-	}
-/*	@After
-	public void close() {
-		driver.close();
-	}
-17	*/
+
 	@Given("^User is on Login page$")
 	public void user_is_on_Login_page() throws Throwable {
 		System.out.println("user is on Login Page");
