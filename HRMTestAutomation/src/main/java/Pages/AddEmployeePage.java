@@ -18,7 +18,7 @@ public class AddEmployeePage extends BaseClass {
 
 	By AddEmployee_Menu=By.xpath("//a[contains(text(),'Add Employee')]");
 
-	By AddEmployee_Header=By.xpath("//body/div[@id='app']/div[1]/div[2]/div[2]/div[1]/div[1]/h6[11]");
+	By AddEmployee_Header=By.xpath("//body/div[@id='app']/div[1]/div[2]/div[2]/div[1]/div[1]/h6[1]");
 
 	By firstname=By.xpath("//body/div[@id='app']/div[1]/div[2]/div[2]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/input[1]");
 
